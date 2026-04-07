@@ -3,7 +3,11 @@
   <component name="Environment.Cache">
     <option name="cache">
       <map>
+
         <entry key="env" value="[{&quot;datum1&quot;:&quot;Global&quot;,&quot;datum2&quot;:&quot;1775556325012epz3&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:[{&quot;datum1&quot;:&quot;User-Service&quot;,&quot;datum2&quot;:&quot;17755563250144jok&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:[{&quot;datum1&quot;:&quot;http://localhost&quot;,&quot;datum2&quot;:&quot;9105&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:&quot;&quot;,&quot;datum4&quot;:&quot;1775556325014yhwm&quot;}]},{&quot;datum1&quot;:&quot;Device-Service&quot;,&quot;datum2&quot;:&quot;1775569000877oooy&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:[{&quot;datum1&quot;:&quot;http://localhost&quot;,&quot;datum2&quot;:&quot;9105&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:&quot;&quot;,&quot;datum4&quot;:&quot;1775569000877h5qt&quot;},{&quot;datum1&quot;:&quot;http://localhost&quot;,&quot;datum2&quot;:&quot;9106&quot;,&quot;datum0&quot;:true,&quot;datum5&quot;:&quot;1775569000877oooy&quot;,&quot;datum3&quot;:&quot;&quot;,&quot;datum4&quot;:&quot;177556912957475mj&quot;}]}]}]" />
+
+        <entry key="env" value="[{&quot;datum1&quot;:&quot;Global&quot;,&quot;datum2&quot;:&quot;1775556325012epz3&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:[{&quot;datum1&quot;:&quot;User-Service&quot;,&quot;datum2&quot;:&quot;17755563250144jok&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:[{&quot;datum1&quot;:&quot;http://localhost&quot;,&quot;datum2&quot;:&quot;9105&quot;,&quot;datum0&quot;:true,&quot;datum3&quot;:&quot;&quot;,&quot;datum4&quot;:&quot;1775556325014yhwm&quot;}]}]}]" />
+
       </map>
     </option>
   </component>
