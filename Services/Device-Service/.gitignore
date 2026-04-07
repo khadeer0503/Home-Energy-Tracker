@@ -31,11 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### miscellaneous files ###
-.env
-.env.*
-*.log
-
-.RestfulApiTool
-
