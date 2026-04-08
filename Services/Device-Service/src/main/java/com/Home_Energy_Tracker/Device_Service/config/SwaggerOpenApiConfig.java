@@ -27,10 +27,10 @@ public class SwaggerOpenApiConfig {
                 .servers(
                         List.of(
                                 new Server()
-                                        .url("http://localhost:9105")
+                                        .url("http://localhost:9106")
                                         .description("Local- DEV_Server"),
                                 new Server()
-                                        .url("http://localhost:9105")
+                                        .url("http://localhost:9106")
                                         .description("Published- Production_Server")
                         )
                 )
