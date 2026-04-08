@@ -1,4 +1,4 @@
-package com.Home_Energy_Tracker.Device_Service.config;
+package com.Home_Energy_Tracker.IOT_Ingestion_Service.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -19,7 +19,7 @@ public class SwaggerOpenApiConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("Home Energy Tracking System API - Device Service API")
+                                .title("Home Energy Tracking System API - IOT Energy Usage Service API")
                                 .version("1.0")
                                 .contact(new Contact().email("mohammed.khadeeruddin@ctlup.com"))
                                 .description("API for Home Energy Tracking System")
@@ -27,16 +27,16 @@ public class SwaggerOpenApiConfig {
                 .servers(
                         List.of(
                                 new Server()
-                                        .url("http://localhost:9106")
+                                        .url("http://localhost:9107")
                                         .description("Local- DEV_Server"),
                                 new Server()
-                                        .url("http://localhost:9106")
+                                        .url("http://localhost:9107")
                                         .description("Published- Production_Server")
                         )
                 )
                 //To arrange the tags in the order we want
                 .tags(List.of(
-                        new Tag().name("Device Service API- RestController").description("Device Service API - Operations related to Home Energy Tracking System [Create, Read, Update, Delete]")
+                        new Tag().name("IOT Energy Usage Service API- RestController").description("IOT Energy Usage Service API - Operations related to Home Energy Tracking System [Create, Read, Update, Delete]")
                 ));
     }
 
@@ -47,7 +47,7 @@ public class SwaggerOpenApiConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("api-docs")
-                .packagesToScan("com.Home_Energy_Tracker.Device_Service.controller") // Specify the package to scan for controllers
+                .packagesToScan("com.Home_Energy_Tracker.IOT-Ingestion-Service.controller") // Specify the package to scan for controllers
                 .build();
     }
 }

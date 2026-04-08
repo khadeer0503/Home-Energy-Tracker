@@ -6,6 +6,7 @@ import com.Home_Energy_Tracker.Device_Service.service.DeviceService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/devices")
+@Tag(name = "Device API- RestController", description = "Device API - Operations related to Home Energy Tracking System [Create, Read, Update, Delete]")
 public class DeviceController {
 
     private final DeviceService deviceService;
@@ -92,7 +94,7 @@ public class DeviceController {
 
 
     //List of all devices of the User By its ID
-    @Operation(summary = "Get all devices of the User", description = "Get paginated and sorted list of devices")
+    @Operation(summary = "Get all devices of the User by UserID", description = "Get paginated and sorted list of devices")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved list of devices of the user"),
             @ApiResponse(responseCode = "500", description = "Server error")

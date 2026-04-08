@@ -1,0 +1,30 @@
+package com.Home_Energy_Tracker.IOT_Ingestion_Service.aspect_AOP;
+
+import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+@Slf4j
+public class LoggingAspect {
+
+    @Pointcut("execution(* com.Home_Energy_Tracker.IOT_Ingestion_Service.service.*.*(..))")
+    public void serviceMethods() {}
+
+    @Before("serviceMethods()")
+    public void logBefore(JoinPoint joinPoint) {
+        log.info("Called service method: {} with arguments: {}",
+                joinPoint.getSignature().getName(), joinPoint.getArgs());
+    }
+
+    @AfterReturning(pointcut = "serviceMethods()", returning = "result")
+    public void logAfterReturning(JoinPoint joinPoint, Object result) {
+        log.info("Service method: {}, returned: {}",
+                joinPoint.getSignature().getName(), result);
+    }
+}
