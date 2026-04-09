@@ -19,11 +19,4 @@
       </profile>
     </annotationProcessing>
   </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Device-Service" options="-parameters" />
-      <module name="IOT-Ingestion-Service" options="-parameters" />
-      <module name="User-Service" options="-parameters" />
-    </option>
-  </component>
 </project>
