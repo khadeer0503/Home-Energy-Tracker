@@ -9,6 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -19,7 +21,8 @@ public class IngestionServiceImpl implements IngestionService {
 
     @Override
     public void ingestEnergyUsage(EnergyUsageDto input) {
-        EnergyUsageDto event = EnergyUsageDto.builder()
+        // convert DTO to Event and send to Kafka topic
+        EnergyUsageEvent event = EnergyUsageEvent.builder()
                 .deviceId(input.getDeviceId())
                 .energyConsumed(input.getEnergyConsumed())
                 .timestamp(input.getTimestamp())
