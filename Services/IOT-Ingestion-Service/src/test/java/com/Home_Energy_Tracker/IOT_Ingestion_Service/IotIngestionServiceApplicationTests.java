@@ -10,6 +10,4 @@ class IotIngestionServiceApplicationTests {
 	void contextLoads() {
 	}
 
-
-
 }

@@ -3,4 +3,6 @@
 .idea/**
 .idea**
  docker/kafka_data
+ docker/kafka_data/**
+ docker/kafka_data**
  #docker/mysql

@@ -4,6 +4,9 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for Device-Service" enabled="true">
+
+      <profile name="Annotation profile for IOT-Ingestion-Service" enabled="true">
+
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
