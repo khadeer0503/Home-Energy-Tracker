@@ -3,20 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for Device-Service" enabled="true">
-
-      <profile name="Annotation profile for IOT-Ingestion-Service" enabled="true">
-
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
-        </processorPath>
-        <module name="Device-Service" />
-        <module name="IOT-Ingestion-Service" />
-        <module name="User-Service" />
-      </profile>
     </annotationProcessing>
   </component>
 </project>

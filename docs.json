@@ -64,21 +64,21 @@
                     {
                         "group": "User Service",
                         "pages": [
-                            "api/users/overview",
-                            "api/users/create",
-                            "api/users/get",
-                            "api/users/update",
-                            "api/users/delete"
+                            "api-reference/users/overview",
+                            "api-reference/users/create",
+                            "api-reference/users/get",
+                            "api-reference/users/update",
+                            "api-reference/users/delete"
                         ]
                     },
                     {
                         "group": "Device Service",
                         "pages": [
-                            "api/devices/overview",
-                            "api/devices/create",
-                            "api/devices/get",
-                            "api/devices/update",
-                            "api/devices/delete"
+                            "api-reference/devices/overview",
+                            "api-reference/devices/create",
+                            "api-reference/devices/get",
+                            "api-reference/devices/update",
+                            "api-reference/devices/delete"
                         ]
                     }
                 ]
