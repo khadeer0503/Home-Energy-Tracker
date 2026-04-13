@@ -6,12 +6,12 @@
         "primary": "#179942"
     },
     "favicon": {
-        "light": "https://media.brand.dev/2b01fe20-c04b-4a1d-a2f9-1d2789c50a7a.jpg",
-        "dark": "https://media.brand.dev/2b01fe20-c04b-4a1d-a2f9-1d2789c50a7a.jpg"
+        "light": "/Images/favicon.ico",
+        "dark": "/Images/favicon.ico"
     },
     "logo": {
-        "light": "https://media.brand.dev/5ffd6ce4-2434-4b4b-920a-f8cacac8b48b.svg",
-        "dark": "https://media.brand.dev/5ffd6ce4-2434-4b4b-920a-f8cacac8b48b.svg"
+        "light": "/Images/favicon.ico",
+        "dark": "/Images/favicon.ico"
     },
     "navbar": {
         "primary": {
