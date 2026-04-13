@@ -1,0 +1,96 @@
+{
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "mint",
+    "name": "Home Energy Tracker",
+    "colors": {
+        "primary": "#179942"
+    },
+    "favicon": {
+        "light": "https://media.brand.dev/2b01fe20-c04b-4a1d-a2f9-1d2789c50a7a.jpg",
+        "dark": "https://media.brand.dev/2b01fe20-c04b-4a1d-a2f9-1d2789c50a7a.jpg"
+    },
+    "logo": {
+        "light": "https://media.brand.dev/5ffd6ce4-2434-4b4b-920a-f8cacac8b48b.svg",
+        "dark": "https://media.brand.dev/5ffd6ce4-2434-4b4b-920a-f8cacac8b48b.svg"
+    },
+    "navbar": {
+        "primary": {
+            "type": "github",
+            "href": "https://github.com/khadeer0503/Home-Energy-Tracker"
+        }
+    },
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Documentation",
+                "groups": [
+                    {
+                        "group": "\uD83D\uDE80 Get Started",
+                        "pages": [
+                            "Pages/index",
+                            "Pages/quickstart",
+                            "Pages/authentication"
+                        ]
+                    },
+                    {
+                        "group": "\uD83D\uDCDD Core Concepts",
+                        "pages": [
+                            "Concepts/architecture",
+                            "concepts/users",
+                            "Concepts/devices"
+                        ]
+                    },
+                    {
+                        "group": "\uD83E\uDDD1\u200D\uD83D\uDCBB Guides",
+                        "pages": [
+                            "Guides/register-user",
+                            "Guides/add-device",
+                            "Guides/energy-alerts",
+                            "Guides/llm-suggestions"
+                        ]
+                    },
+                    {
+                        "group": "Configuration",
+                        "pages": [
+                            "configuration/environment",
+                            "configuration/database"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "API Reference",
+                "groups": [
+                    {
+                        "group": "User Service",
+                        "pages": [
+                            "Api-Reference/Users/overview",
+                            "Api-Reference/Users/create",
+                            "Api-Reference/Users/get",
+                            "Api-Reference/Users/update",
+                            "Api-Reference/Users/delete"
+                        ]
+                    },
+                    {
+                        "group": "Device Service",
+                        "pages": [
+                            "Api-Reference/Devices/overview",
+                            "Api-Reference/Devices/create",
+                            "Api-Reference/Devices/get",
+                            "Api-Reference/Devices/update",
+                            "Api-Reference/Devices/delete"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "background": {
+        "color": {
+            "light": "#FAFAFA"
+        }
+    },
+    "metadata": {
+        "timestamp": false
+    }
+}
