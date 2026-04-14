@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Services/Device-Service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Services/Energy-Usage-Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Services/IOT-Ingestion-Service/IOT-Ingestion-Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Services/IOT-Ingestion-Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Services/User-Service/src/main/java" charset="UTF-8" />

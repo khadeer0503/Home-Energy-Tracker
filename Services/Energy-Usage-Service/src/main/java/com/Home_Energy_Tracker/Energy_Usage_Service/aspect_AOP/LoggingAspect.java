@@ -1,4 +1,4 @@
-package com.Home_Energy_Tracker.User_Service.aspect_AOP;
+package com.Home_Energy_Tracker.Energy_Usage_Service.aspect_AOP;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -7,13 +7,14 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
 @Aspect
 @Slf4j
 public class LoggingAspect {
 
-    @Pointcut("execution(* com.Home_Energy_Tracker.User_Service.service.*.*(..))")
+    @Pointcut("execution(* com.Home_Energy_Tracker.Energy_Usage_Service.service.*.*(..))")
     public void serviceMethods() {}
 
     @Before("serviceMethods()")
