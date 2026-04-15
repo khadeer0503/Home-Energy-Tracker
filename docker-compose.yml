@@ -13,7 +13,7 @@ services:
       - mysql_data:/var/lib/mysql
       - db-data:/var/log/mysql
 
-  kafka:
+  Kafka:
     container_name: kafka
     image: apache/kafka:latest
     ports:
@@ -95,28 +95,28 @@ services:
     ports:
       - "8070:8080"
     depends_on:
-      - kafka
+      - Kafka
     environment:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092  # Use internal Docker network name
       DYNAMIC_CONFIG_ENABLED: 'true'
     restart: unless-stopped
 
-#  influxdb:
-#    image: influxdb:2.7
-#    container_name: influxdb
-#    ports:
-#      - "8072:8086"
-#    environment:
-#      - DOCKER_INFLUXDB_INIT_MODE=setup
-#      - DOCKER_INFLUXDB_INIT_USERNAME=admin
-#      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
-#      - DOCKER_INFLUXDB_INIT_ORG=leetjourney
-#      - DOCKER_INFLUXDB_INIT_BUCKET=usage-bucket
-#      - DOCKER_INFLUXDB_INIT_RETENTION=1w
-#      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=my-token
-#    volumes:
-#      - ./influxdb_data:/var/lib/influxdb2
+  InfluxDB:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8072:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: admin123
+      DOCKER_INFLUXDB_INIT_ORG: Home_Energy_Tracker
+      DOCKER_INFLUXDB_INIT_BUCKET: energy-usage-bucket
+      DOCKER_INFLUXDB_INIT_RETENTION: 1w
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: my-token
+    volumes:
+      - ./influxdb_data:/var/lib/influxdb2
 #
 #  mailpit:
 #    image: axllent/mailpit:latest

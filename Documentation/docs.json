@@ -50,7 +50,7 @@
                         ]
                     },
                     {
-                        "group": "Configuration",
+                        "group": "⚙\uFE0F Configuration",
                         "pages": [
                             "configuration/environment",
                             "configuration/database"
@@ -62,7 +62,7 @@
                 "tab": "API Reference",
                 "groups": [
                     {
-                        "group": "User Service",
+                        "group": "\uD83E\uDDB8 User Service",
                         "pages": [
                             "Api-Reference/Users/overview",
                             "Api-Reference/Users/create",
@@ -72,7 +72,7 @@
                         ]
                     },
                     {
-                        "group": "Device Service",
+                        "group": "\uD83D\uDD2D Device Service",
                         "pages": [
                             "Api-Reference/Devices/overview",
                             "Api-Reference/Devices/create",
