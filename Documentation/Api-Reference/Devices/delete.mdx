@@ -1,0 +1,23 @@
+# Delete a device
+
+```http
+DELETE /api/v1/devices/{id}
+```
+
+Base URL: `http://localhost:9106`
+
+## Path parameters
+
+- `id` - device identifier
+
+## Success response
+
+- `204 No Content` when deleted
+- `404 Not Found` when the device does not exist
+
+## Example
+
+```powershell
+curl -X DELETE http://localhost:9106/api/v1/devices/1
+```
+

@@ -1,0 +1,46 @@
+# Get user energy usage
+
+```http
+GET /api/v1/energy-usage/{userId}?days=3
+```
+
+Base URL: `http://localhost:9108`
+
+## Path parameters
+
+- `userId` - user identifier
+
+## Query parameters
+
+- `days` (optional, default `3`) - number of recent days to include in aggregation
+
+## Success and errors
+
+- `200 OK` - usage returned successfully
+- `400 Bad Request` - invalid input
+- `404 Not Found` - user or usage data not found
+
+## Example
+
+```powershell
+curl "http://localhost:9108/api/v1/energy-usage/1?days=3"
+```
+
+## Example response shape
+
+```json
+{
+  "userId": 1,
+  "devices": [
+    {
+      "id": 10,
+      "name": "Bedroom AC",
+      "type": "AC",
+      "location": "Bedroom",
+      "userId": 1,
+      "energyConsumed": 2450.75
+    }
+  ]
+}
+```
+

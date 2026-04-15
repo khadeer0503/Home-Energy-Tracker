@@ -1,0 +1,41 @@
+# Environment
+
+This project uses a few hard-coded defaults in service configuration. When you run the services locally, these are the values to know.
+
+## Service ports
+
+| Component | Default port |
+| --- | --- |
+| `User-Service` | `9105` |
+| `Device-Service` | `9106` |
+| `IOT-Ingestion-Service` | `9107` |
+| `Energy-Usage-Service` | `9108` |
+| Kafka UI | `8070` |
+| InfluxDB | `8072` |
+| MySQL | `3307` on the host |
+
+## Kafka configuration
+
+- Bootstrap server: `localhost:9094`
+- Topic produced by ingestion: `energy-usage`
+- Topic used for alert events: `energy-alerts`
+
+## InfluxDB configuration
+
+- URL: `http://localhost:8072`
+- Organization: `Home_Energy_Tracker`
+- Bucket: `energy-usage-bucket`
+- Token: `my-token`
+
+## Ingestion simulator
+
+The ingestion service includes a continuous simulator that posts to:
+
+```text
+http://localhost:9107/api/v1/ingestion/energy-usage
+```
+
+## Tip
+
+If you run a service directly on your machine, make sure its environment variables or `application.properties` still point at the correct host ports for the Docker containers you started.
+

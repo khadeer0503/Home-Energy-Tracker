@@ -1,0 +1,42 @@
+# Database
+
+The platform uses MySQL for transactional data such as users and devices.
+
+## Container setup
+
+From `docker-compose.yml`:
+
+- database name: `home_energy_tracker`
+- root password: `root`
+- host port: `3307`
+- container port: `3306`
+
+## Initialization script
+
+The compose file mounts the database bootstrap script from the repository root:
+
+```text
+./docker/mysql/init.sql
+```
+
+That script creates the schema used by the microservices.
+
+## Service JDBC URLs
+
+The service configuration files currently point to:
+
+```text
+jdbc:mysql://localhost:3306/home_energy_tracker
+```
+
+That works if MySQL is available on the standard local port. If you are using the Docker container exposed by `docker compose`, the host port is `3307`, so you may need to update the JDBC URL to match your environment.
+
+## Tables
+
+- `users` — user profile and alert preference data
+- `devices` — device metadata and ownership data
+
+## Practical note
+
+If you change the database schema, update the bootstrap SQL and any Flyway migrations so the docs stay aligned with the running schema.
+

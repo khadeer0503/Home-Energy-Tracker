@@ -1,0 +1,32 @@
+# Get users
+
+```http
+GET /api/v1/users
+GET /api/v1/users/{id}
+```
+
+Base URL: `http://localhost:9105`
+
+## Get all users
+
+Returns the full list of users stored in MySQL.
+
+### Response
+
+- `200 OK`
+
+## Get a user by ID
+
+Use the path parameter `id` to fetch one user.
+
+### Response
+
+- `200 OK` when the user exists
+- `404 Not Found` when the user cannot be found
+
+## Example
+
+```bash
+curl http://localhost:9105/api/v1/users/1
+```
+

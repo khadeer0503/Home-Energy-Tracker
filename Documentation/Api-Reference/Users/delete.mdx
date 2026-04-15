@@ -1,0 +1,28 @@
+# Delete a user
+
+```http
+DELETE /api/v1/users/{id}
+```
+
+Base URL: `http://localhost:9105`
+
+## Path parameters
+
+- `id` - user identifier
+
+## Success response
+
+- `204 No Content` when the user is deleted
+- `404 Not Found` when the user does not exist
+
+## Example
+
+```powershell
+curl -X DELETE http://localhost:9105/api/v1/users/1
+```
+
+## Notes
+
+- Deleting a user does not automatically delete devices in the `Device-Service`.
+- If you need full cleanup, remove related devices explicitly.
+

@@ -1,0 +1,49 @@
+# Register a user
+
+Use the `User-Service` to create a new household profile before attaching devices.
+
+## Endpoint
+
+```http
+POST /api/v1/users
+```
+
+Base URL:
+
+```text
+http://localhost:9105
+```
+
+## Request body
+
+```json
+{
+  "name": "Amina",
+  "surname": "Khan",
+  "email": "amina@example.com",
+  "address": "12 Green Street",
+  "alerting": true,
+  "energyAlertingThreshold": 1500
+}
+```
+
+## Example request
+
+```bash
+curl -X POST http://localhost:9105/api/v1/users `
+  -H "Content-Type: application/json" `
+  -d "{\"name\":\"Amina\",\"surname\":\"Khan\",\"email\":\"amina@example.com\",\"address\":\"12 Green Street\",\"alerting\":true,\"energyAlertingThreshold\":1500}"
+```
+
+## Response
+
+- `201 Created` when the user is stored successfully
+- `400 Bad Request` for invalid input
+
+The response body contains the created user, including the generated `id`.
+
+## Notes
+
+- `email` must be unique.
+- `alerting` and `energyAlertingThreshold` are used later when energy usage is aggregated.
+

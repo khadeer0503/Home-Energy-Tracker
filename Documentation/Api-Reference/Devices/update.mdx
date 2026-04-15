@@ -1,0 +1,30 @@
+# Update a device
+
+```http
+PUT /api/v1/devices/{id}
+```
+
+Base URL: `http://localhost:9106`
+
+## Request body
+
+```json
+{
+  "name": "Bedroom AC",
+  "type": "AC",
+  "location": "Master Bedroom",
+  "userId": 1
+}
+```
+
+## Success response
+
+- `200 OK` when the device is updated
+- `404 Not Found` when the device does not exist
+
+## Example
+
+```powershell
+curl -X PUT http://localhost:9106/api/v1/devices/1 -H "Content-Type: application/json" -d "{\"name\":\"Bedroom AC\",\"type\":\"AC\",\"location\":\"Master Bedroom\",\"userId\":1}"
+```
+

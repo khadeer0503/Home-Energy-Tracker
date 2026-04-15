@@ -1,0 +1,24 @@
+# Authentication
+
+The controllers inspected in this repository snapshot do not enforce a dedicated authentication flow yet.
+
+## Current state
+
+- `User-Service` and `Device-Service` expose CRUD endpoints directly on their local ports.
+- The broader architecture mentions an API gateway, but the documented service controllers are accessible without a separate login step in the current code.
+- A Keycloak setup is hinted at in `docker-compose.yml`, but it is commented out.
+
+## What this means for local development
+
+- Use the service URLs directly while developing and testing.
+- If you add authentication later, route client traffic through the gateway and update these docs to match the new security model.
+
+## Recommended next step
+
+When auth becomes active, document:
+
+- login / token acquisition
+- protected endpoints
+- gateway base URL
+- token refresh or session expiry behavior
+

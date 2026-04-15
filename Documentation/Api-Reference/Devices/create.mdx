@@ -1,0 +1,36 @@
+# Create a device
+
+```http
+POST /api/v1/devices
+```
+
+Base URL: `http://localhost:9106`
+
+## Request body
+
+```json
+{
+  "name": "Bedroom AC",
+  "type": "AC",
+  "location": "Bedroom",
+  "userId": 1
+}
+```
+
+## Success response
+
+- `201 Created`
+
+The response body contains the persisted device, including the generated `id`.
+
+## Example
+
+```powershell
+curl -X POST http://localhost:9106/api/v1/devices -H "Content-Type: application/json" -d "{\"name\":\"Bedroom AC\",\"type\":\"AC\",\"location\":\"Bedroom\",\"userId\":1}"
+```
+
+## Notes
+
+- `type` must match a valid `DeviceType` enum value.
+- `userId` should refer to an existing user in `User-Service`.
+

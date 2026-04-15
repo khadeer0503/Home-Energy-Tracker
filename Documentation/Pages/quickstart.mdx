@@ -1,0 +1,62 @@
+# Quickstart
+
+Follow these steps to run the platform locally.
+
+## Prerequisites
+
+- Java 25 or newer
+- Docker Desktop with Compose support
+- Maven wrapper support is already included in each service module
+
+## Start the infrastructure
+
+From the repository root, start MySQL, Kafka, Kafka UI, and InfluxDB:
+
+```bash
+docker compose up -d
+```
+
+Useful host ports:
+
+- MySQL: `3307`
+- Kafka: `9094`
+- Kafka UI: `8070`
+- InfluxDB: `8072`
+
+## Run a service locally
+
+Each service has its own Maven wrapper. For example:
+
+```bash
+cd Services/IOT-Ingestion-Service
+./mvnw spring-boot:run
+```
+
+Other service ports:
+
+- `User-Service` — `9105`
+- `Device-Service` — `9106`
+- `IOT-Ingestion-Service` — `9107`
+- `Energy-Usage-Service` — `9108`
+
+## Send a test energy event
+
+The ingestion endpoint accepts the `EnergyUsageDto` payload:
+
+```bash
+curl -X POST http://localhost:9107/api/v1/ingestion/energy-usage `
+  -H "Content-Type: application/json" `
+  -d "{\"deviceId\":1,\"energyConsumed\":1200.5,\"timestamp\":\"01-01-2065T12:00:00.000Z\"}"
+```
+
+## Verify the flow
+
+1. Open Kafka UI at `http://localhost:8070` and confirm the `energy-usage` topic receives the event.
+2. Check the energy-usage service logs for Kafka consumption and InfluxDB writes.
+3. Inspect InfluxDB at `http://localhost:8072` if you want to query the stored measurement data.
+
+## Notes
+
+- The MySQL container is exposed on host port `3307`, while the service properties currently point at `localhost:3306`.
+- If you run the services directly on your machine, make sure their JDBC URLs match the database instance you are actually using.
+

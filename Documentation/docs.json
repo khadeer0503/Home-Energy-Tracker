@@ -36,7 +36,7 @@
                         "group": "\uD83D\uDCDD Core Concepts",
                         "pages": [
                             "Concepts/architecture",
-                            "concepts/users",
+                            "Concepts/users",
                             "Concepts/devices"
                         ]
                     },
@@ -52,8 +52,8 @@
                     {
                         "group": "⚙\uFE0F Configuration",
                         "pages": [
-                            "configuration/environment",
-                            "configuration/database"
+                            "Configuration/environment",
+                            "Configuration/database"
                         ]
                     }
                 ]
@@ -79,6 +79,13 @@
                             "Api-Reference/Devices/get",
                             "Api-Reference/Devices/update",
                             "Api-Reference/Devices/delete"
+                        ]
+                    },
+                    {
+                        "group": "⚡ Energy Usage Service",
+                        "pages": [
+                            "Api-Reference/Energy-Usage/overview",
+                            "Api-Reference/Energy-Usage/get"
                         ]
                     }
                 ]

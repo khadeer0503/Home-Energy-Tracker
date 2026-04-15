@@ -1,0 +1,34 @@
+# Home Energy Tracker
+
+Home Energy Tracker is a Spring Boot microservice system for collecting device readings, streaming them through Kafka, storing time-series usage in InfluxDB, and persisting user/device metadata in MySQL.
+
+## What this documentation covers
+
+- How to start the local infrastructure
+- The main domain concepts behind users, devices, and energy usage
+- The public CRUD APIs for users and devices
+- The ingestion and energy-processing flow
+- Configuration values used by the services
+
+## Current service map
+
+- `User-Service` — `http://localhost:9105`
+- `Device-Service` — `http://localhost:9106`
+- `IOT-Ingestion-Service` — `http://localhost:9107`
+- `Energy-Usage-Service` — `http://localhost:9108`
+
+## Event flow
+
+1. A device reading is sent to the ingestion service.
+2. The ingestion service publishes an `energy-usage` event to Kafka.
+3. The energy-usage service consumes the event, enriches it with user/device metadata, and stores measurements in InfluxDB.
+4. When thresholds are exceeded, alert events are published for downstream notification handling.
+
+## Local tooling
+
+- Kafka UI: `http://localhost:8070`
+- InfluxDB: `http://localhost:8072`
+- MySQL: `localhost:3307` from the host when using `docker compose`
+
+Use the pages in this docs site to explore the architecture, setup steps, and APIs in more detail.
+

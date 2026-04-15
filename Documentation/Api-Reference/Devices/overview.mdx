@@ -1,0 +1,41 @@
+# Device API reference
+
+Base URL: `http://localhost:9106`
+
+The `Device-Service` provides CRUD endpoints for household devices and a route to list devices by user.
+
+## Endpoints
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/devices` | List all devices |
+| `GET` | `/api/v1/devices/{id}` | Get a device by ID |
+| `GET` | `/api/v1/devices/device/{userId}` | List devices for a specific user |
+| `POST` | `/api/v1/devices` | Create a device |
+| `PUT` | `/api/v1/devices/{id}` | Update a device |
+| `DELETE` | `/api/v1/devices/{id}` | Delete a device |
+
+## Device model
+
+`DeviceDto` fields:
+
+- `id`
+- `name`
+- `type`
+- `location`
+- `userId`
+
+## Device type values
+
+The enum includes values such as:
+
+- `LIGHT`
+- `THERMOSTAT`
+- `AC`
+- `REFRIGERATOR`
+- `WASHING_MACHINE`
+- `OVEN`
+- `OTHER`
+
+Use uppercase enum values in API requests.
+

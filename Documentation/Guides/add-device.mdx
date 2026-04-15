@@ -1,0 +1,51 @@
+# Add a device
+
+Use the `Device-Service` to register a device and attach it to a user.
+
+## Endpoint
+
+```http
+POST /api/v1/devices
+```
+
+Base URL:
+
+```text
+http://localhost:9106
+```
+
+## Request body
+
+```json
+{
+  "name": "Living Room Lamp",
+  "type": "LIGHT",
+  "location": "Living Room",
+  "userId": 1
+}
+```
+
+## Example request
+
+```bash
+curl -X POST http://localhost:9106/api/v1/devices `
+  -H "Content-Type: application/json" `
+  -d "{\"name\":\"Living Room Lamp\",\"type\":\"LIGHT\",\"location\":\"Living Room\",\"userId\":1}"
+```
+
+## Response
+
+- `201 Created` when the device is stored successfully
+- `400 Bad Request` for invalid input
+
+The response body contains the created device, including the generated `id`.
+
+## Supported device types
+
+Common values include `LIGHT`, `THERMOSTAT`, `AC`, `REFRIGERATOR`, `WASHING_MACHINE`, `DRYER`, `OVEN`, `MICROWAVE`, `DISHWASHER`, and `OTHER`.
+
+## Notes
+
+- `userId` should refer to an existing user.
+- To list devices for a user, the controller currently exposes `GET /api/v1/devices/device/{userId}`.
+

@@ -1,0 +1,34 @@
+# Energy alerts
+
+The alert flow is driven by the energy-usage service and the user alert settings.
+
+## How alerting works
+
+1. A usage event arrives at the ingestion service.
+2. The ingestion service publishes the event to Kafka on `energy-usage`.
+3. The energy-usage service consumes the event and groups readings by user.
+4. The service compares the aggregated consumption with the user's `energyAlertingThreshold`.
+5. If the total exceeds the threshold and `alerting` is enabled, an alert event is published to the downstream alert topic.
+
+## Required user fields
+
+To participate in alerting, a user should have:
+
+- `alerting: true`
+- a numeric `energyAlertingThreshold`
+- at least one device assigned through `userId`
+
+## How to verify locally
+
+- Send a high `energyConsumed` reading to the ingestion endpoint.
+- Watch Kafka UI for the `energy-usage` topic.
+- Check the energy-usage service logs for threshold evaluation.
+
+## Email notifications
+
+The repository includes a commented Mailpit setup in `docker-compose.yml`. If you want to test email delivery, enable that service or connect the alert consumer to your preferred mail transport.
+
+## Practical tip
+
+Use a small threshold during local testing so it is easy to trigger the alert path.
+

@@ -1,0 +1,33 @@
+# User API reference
+
+Base URL: `http://localhost:9105`
+
+The `User-Service` exposes CRUD endpoints for household profiles and alert preferences.
+
+## Endpoints
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/users` | List all users |
+| `GET` | `/api/v1/users/{id}` | Get a user by ID |
+| `POST` | `/api/v1/users` | Create a user |
+| `PUT` | `/api/v1/users/{id}` | Update a user |
+| `DELETE` | `/api/v1/users/{id}` | Delete a user |
+
+## User model
+
+The controller works with `UserDto` fields:
+
+- `id`
+- `name`
+- `surname`
+- `email`
+- `address`
+- `alerting`
+- `energyAlertingThreshold`
+
+## Notes
+
+- `email` is unique.
+- `alerting` and `energyAlertingThreshold` are used by the energy-usage service when evaluating thresholds.
+

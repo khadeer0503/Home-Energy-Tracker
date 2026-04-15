@@ -1,0 +1,26 @@
+# Energy Usage API reference
+
+Base URL: `http://localhost:9108`
+
+The `Energy-Usage-Service` exposes a read endpoint for aggregated usage per user.
+
+## Endpoint
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/energy-usage/{userId}?days=3` | Returns aggregated device energy usage for a user |
+
+## Response model
+
+The endpoint returns `UsageDto`:
+
+- `userId`
+- `devices` (list of device usage items)
+
+Each device item contains usage and device context fields.
+
+## Notes
+
+- `days` defaults to `3` when not provided.
+- The endpoint is documented in service Swagger under tag `Energy Usage API`.
+
