@@ -1,0 +1,36 @@
+# Update a user
+
+```http
+PUT /api/v1/users/{id}
+```
+
+Base URL: `http://localhost:9105`
+
+## Request body
+
+Send the updated `UserDto` fields in the body. A typical payload looks like:
+
+```json
+{
+  "name": "superman",
+   "surname": "man",
+   "email": "superman@example.com",
+  "address": "15 Green Street",
+  "alerting": true,
+  "energyAlertingThreshold": 1800
+}
+```
+
+## Success response
+
+- `200 OK` when the user is updated
+- `404 Not Found` when the user does not exist
+
+## Example
+
+```bash
+curl -X PUT http://localhost:9105/api/v1/users/1 `
+  -H "Content-Type: application/json" `
+  -d "{\"name\":\"Amina\",\"surname\":\"Khan\",\"email\":\"amina@example.com\",\"address\":\"15 Green Street\",\"alerting\":true,\"energyAlertingThreshold\":1800}"
+```
+

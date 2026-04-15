@@ -1,0 +1,29 @@
+# LLM suggestions
+
+This repository snapshot does not include a dedicated LLM service yet, so treat this page as a design note for a future feature.
+
+## What an LLM layer could do
+
+- Summarize daily or weekly energy usage trends
+- Suggest threshold adjustments based on historical consumption
+- Recommend devices that may be consuming unusually high power
+- Turn raw usage data into plain-language tips for the homeowner
+
+## Good inputs for a future model
+
+- user profile and threshold settings
+- device inventory and room location
+- recent energy usage readings from InfluxDB
+- alert history and the time of each spike
+
+## Safe implementation approach
+
+1. Keep the source-of-truth data in MySQL, Kafka, and InfluxDB.
+2. Generate recommendations from read-only data.
+3. Surface the output through a separate endpoint or background job.
+4. Make it easy to disable if the model is unavailable.
+
+## Documentation note
+
+If you add an LLM-backed feature later, update this page with the actual endpoint, model provider, and prompt/response format.
+

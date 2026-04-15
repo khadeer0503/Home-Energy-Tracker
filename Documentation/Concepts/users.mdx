@@ -1,0 +1,31 @@
+# Users
+
+Users represent household members who own devices and receive usage-based alerts.
+
+## User model
+
+The documented `UserDto` contains:
+
+- `id`
+- `name`
+- `surname`
+- `email`
+- `address`
+- `alerting`
+- `energyAlertingThreshold`
+
+## Alert settings
+
+- `alerting` enables or disables threshold-based alert evaluation for a user.
+- `energyAlertingThreshold` stores the maximum allowed consumption used by the processing service.
+
+## Data rules
+
+- `email` is unique.
+- User records are stored in MySQL.
+- Device ownership and energy aggregation both depend on user IDs.
+
+## Related API
+
+See the user API reference for create, read, update, and delete operations.
+

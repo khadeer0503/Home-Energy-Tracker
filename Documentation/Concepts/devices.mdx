@@ -1,0 +1,41 @@
+# Devices
+
+Devices represent the hardware or appliances whose usage is tracked by the system.
+
+## Device model
+
+The documented `DeviceDto` contains:
+
+- `id`
+- `name`
+- `type`
+- `location`
+- `userId`
+
+## Ownership
+
+Each device belongs to a user through `userId`. That relationship is important for:
+
+- grouping usage by household member
+- resolving thresholds during alert evaluation
+- showing the correct devices when querying by user
+
+## Supported types
+
+The `DeviceType` enum includes values such as:
+
+- `LIGHT`
+- `THERMOSTAT`
+- `AC`
+- `REFRIGERATOR`
+- `WASHING_MACHINE`
+- `DRYER`
+- `OVEN`
+- `MICROWAVE`
+- `DISHWASHER`
+- `OTHER`
+
+## Related API
+
+See the device API reference for create, read, update, and delete operations.
+

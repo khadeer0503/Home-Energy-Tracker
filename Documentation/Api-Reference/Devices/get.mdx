@@ -1,0 +1,35 @@
+# Get devices
+
+```http
+GET /api/v1/devices
+GET /api/v1/devices/{id}
+GET /api/v1/devices/device/{userId}
+```
+
+Base URL: `http://localhost:9106`
+
+## Get all devices
+
+- Route: `GET /api/v1/devices`
+- Response: `200 OK`
+
+## Get a device by ID
+
+- Route: `GET /api/v1/devices/{id}`
+- Response: `200 OK` when found, `404 Not Found` when missing
+
+## Get devices by user ID
+
+- Route: `GET /api/v1/devices/device/{userId}`
+- Response: `200 OK` with the user's device list
+
+## Example
+
+```powershell
+curl http://localhost:9106/api/v1/devices/device/1
+```
+
+## Compatibility note
+
+Some internal client code may reference `/users/{userId}`, but the current controller mapping is `/device/{userId}`.
+

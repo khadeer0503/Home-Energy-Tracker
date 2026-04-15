@@ -1,0 +1,33 @@
+# Architecture
+
+Home Energy Tracker uses a split architecture so each service owns a single concern:
+
+- **User-Service** stores user profiles and alert preferences in MySQL.
+- **Device-Service** stores device metadata and device ownership in MySQL.
+- **IOT-Ingestion-Service** accepts usage readings and publishes them to Kafka.
+- **Energy-Usage-Service** consumes usage events, enriches them with user/device data, writes measurements to InfluxDB, and emits alert events when thresholds are exceeded.
+
+## Data flow
+
+```text
+Device or simulator -> Ingestion Service -> Kafka topic `energy-usage` -> Energy-Usage Service -> InfluxDB
+														   \-> threshold check -> alert event -> downstream notifier
+```
+
+## Storage split
+
+- **MySQL** is used for transactional domain data such as users and devices.
+- **Kafka** is used for asynchronous event delivery between ingestion and processing.
+- **InfluxDB** is used for time-series energy measurements.
+
+## Local service ports
+
+- `9105` — `User-Service`
+- `9106` — `Device-Service`
+- `9107` — `IOT-Ingestion-Service`
+- `9108` — `Energy-Usage-Service`
+
+## Why this split matters
+
+This design keeps the ingestion endpoint fast, lets the processing layer scale independently, and stores each type of data in the most appropriate datastore.
+

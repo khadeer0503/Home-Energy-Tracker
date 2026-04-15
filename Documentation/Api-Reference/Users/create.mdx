@@ -1,0 +1,32 @@
+# Create a user
+
+```http
+POST /api/v1/users
+```
+
+Base URL: `http://localhost:9105`
+
+## Request body
+
+```json
+{
+  "name": "superman",
+  "surname": "man",
+  "email": "superman@example.com",
+  "address": "12 Green Street",
+  "alerting": true,
+  "energyAlertingThreshold": 1500
+}
+```
+
+## Success response
+
+- `201 Created`
+
+The response body contains the persisted user, including the generated `id`.
+
+## Validation notes
+
+- `email` must be unique.
+- `alerting` and `energyAlertingThreshold` should be set together so the downstream alert flow has the right baseline.
+
