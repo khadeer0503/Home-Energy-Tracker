@@ -1,4 +1,5 @@
 .RestfulApiTool
 .idea
 docker/kafka_data
+docker/kafka_data/*
 influxdb_data
