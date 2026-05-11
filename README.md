@@ -27,8 +27,5 @@ A **microservices reference implementation** for monitoring and reasoning about 
 
 ## Architecture overview
 
-
-The system is a **microservices architecture** built primarily with **Spring Boot 4** and **Java 21**. Services are independently deployable modules; integration uses **synchronous HTTP** (client → gateway → service) and **asynchronous messaging** (Kafka) where loose coupling and scale matter.
-
 The system is a **microservices architecture** built primarily with **Spring Boot 4** and **Java 25**. Services are independently deployable modules; integration uses **synchronous HTTP** (client → gateway → service) and **asynchronous messaging** (Kafka) where loose coupling and scale matter.
 
