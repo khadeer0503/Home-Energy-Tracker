@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/Services/IOT-Ingestion-Service/IOT-Ingestion-Service/pom.xml" />
         <option value="$PROJECT_DIR$/Services/IOT-Ingestion-Service/pom.xml" />
         <option value="$PROJECT_DIR$/Services/Energy-Usage-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/Services/Alert-Service/pom.xml" />
       </list>
     </option>
   </component>
