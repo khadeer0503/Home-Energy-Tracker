@@ -15,10 +15,20 @@
         <module name="IOT-Ingestion-Service" />
         <module name="User-Service" />
       </profile>
+      <profile name="Annotation profile for Alert-Service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="Alert-Service" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Alert-Service" options="-parameters" />
       <module name="Device-Service" options="-parameters" />
       <module name="Energy-Usage-Service" options="-parameters" />
       <module name="IOT-Ingestion-Service" options="-parameters" />

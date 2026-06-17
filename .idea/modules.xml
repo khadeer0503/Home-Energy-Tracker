@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Services/Device-Service/Device-Service.iml" filepath="$PROJECT_DIR$/Services/Device-Service/Device-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Home-Energy-Tracker.iml" filepath="$PROJECT_DIR$/.idea/Home-Energy-Tracker.iml" />
     </modules>
   </component>
