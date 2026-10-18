@@ -105,4 +105,11 @@ public class DeviceController {
         return ResponseEntity.ok(devices);
     }
 
+//    @GetMapping("/user/{userId}")
+//    public ResponseEntity<List<DeviceDto>> getAllDevicesByUserId(
+//            @PathVariable Long userId) {
+//        List<DeviceDto> devices = deviceService.getAllDevicesByUserId(userId);
+//        return ResponseEntity.ok(devices);
+//    }
+
 }

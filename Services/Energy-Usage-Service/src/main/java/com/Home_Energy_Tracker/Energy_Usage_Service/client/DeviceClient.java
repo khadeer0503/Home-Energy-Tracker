@@ -1,6 +1,7 @@
 package com.Home_Energy_Tracker.Energy_Usage_Service.client;
 
 import com.Home_Energy_Tracker.Energy_Usage_Service.dto.DeviceDto;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
