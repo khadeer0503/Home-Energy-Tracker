@@ -7,14 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="API_Gateway" />
       </profile>
-      <profile name="Annotation profile for Alert-Service" enabled="true">
+      <profile name="Annotation profile for Insight-Service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="Insight-Service" />
         <module name="Alert-Service" />
       </profile>
       <profile name="Annotation profile for User-Service" enabled="true">
@@ -28,15 +30,6 @@
         <module name="Device-Service" />
         <module name="IOT-Ingestion-Service" />
         <module name="User-Service" />
-      </profile>
-      <profile name="Annotation profile for Insight-Service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="Insight-Service" />
       </profile>
     </annotationProcessing>
   </component>
