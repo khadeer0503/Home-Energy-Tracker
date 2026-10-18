@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/Services/Energy-Usage-Service/pom.xml" />
         <option value="$PROJECT_DIR$/Services/Alert-Service/pom.xml" />
         <option value="$PROJECT_DIR$/Services/Insight-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/Services/API_Gateway/pom.xml" />
       </list>
     </option>
   </component>
